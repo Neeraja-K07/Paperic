@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family:'Roboto',sans-serif;
+}
+.wrapper{
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+} 
+.background-color{
+    width:100%;
+    min-height: 100vh;
+    display:flex;
+}
+.bg-1{
+    flex:1;
+    background-color:#4481eb;
+}
+.bg-2{
+    flex:1;
+    background-color:orange;
+}
+.about-container{
+    width:85%;
+    min-height: 80vh;
+    position:absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:white;
+    border-radius:5px;
+    padding:20px;
+    border:5px;
+    box-shadow:4px 4px 10px #686868;
+}
+.image-container{
+    flex:1;
+   
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.image-container img{
+    width:450px;
+    height:400px;
+    object-fit: cover;
+}
+.text-container{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.text-container h1{
+    font-size:15px;
+    padding:10px 0px;
+}
+.text-container p {
+    font-size: 12px; /* Adjust the font size as needed */
+    line-height: 18px; /* Adjust the line height as needed */
+    padding: 10px 0px;
+}
+
+.mbtn1 {
+    height:50px;
+    width:40%;
+    outline:none;
+    border:none;
+    color:white;
+    background:#4481eb;
+    border-radius: 25px; /* Adjust the border-radius values for an oval shape */
+    transition:all 0.4s;
+}
+.mbtn1:hover{
+    background-color: orange;
+}
+@media screen and (max-width:1600px){
+    .about-container{
+        width:90%;
+    }
+    .image-container{
+        width:400px;
+        height:400px;
+
+    }
+    .text-container h1{
+        font-size:50px;
+    }
+}
+@media screen and (max-width:1100px){
+    .about-container{
+        flex-direction:column;
+    }
+    .text-container{
+        align-items: center;
+    }
+}
+@media screen and (max-width:550px){
+   .image-container img{
+    width:300px;
+    height:300px;
+   }
+   .text-container p{
+    font-size: 20px;
+   }
+}
+
+
+.accordion
+{
+    display:flex;
+    align-items:center;
+   padding: 45px 90px 45px 60px;
+   max-width:1210px;
+   width:100%;
+   justify-content:space-between;
+}
+.accordion .image-box{
+    height:360px;
+    width:300px;
+}
+.accordion .image-box img{
+    height: 100%;
+    width:100%;
+    object-fit:contain;
+} 
+
+.accordion .accordion-text .title
+{
+    font-size:20px;
+    font-weight:400;
+    color:black;
+}
+
+.accordion .accordion-text li {
+    list-style:none;
+    cursor:pointer;
+}
+.accordion-text li .question-arrow{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.accordion-text li .line{
+    display:block;
+    height:2px;
+    width:100%;
+    background:rgba(0,0,0,0.1);
+    margin:10px 0;
+}
+.accordion-text li .question-arrow .question{
+    font-size:18px;
+    font-weight:500;
+    color:black;
+    transition:all 0.3s ease;
+}
+.accordion-text li:hover .question-arrow .arrow{
+    font-size:20px;
+    color:black;
+    transition:all 0.3s ease;
+}
+.accordion-text li:hover .question-arrow .question{
+    color:orange;
+}
+.accordion-text li:hover  .question-arrow .arrow{
+    color:orange;
+}
+.accordion-text li p{
+    font-size:15px;
+    font-weight:300;
+    display:none;
+}
+.accordion-text li.showAnswer p {
+    display: block;
+}
+ .faq-title {
+            font-size: 36px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .faq-title span {
+            background: linear-gradient(90deg, orange 50%, blue 50%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            display: inline-block;
+            transition: background-position 0.3s ease;
+        }
+
+        .faq-title span:first-child {
+            background-size: 200% 100%;
+        }
+
+        .faq-title span:last-child {
+            background-size: 200% 100%;
+        }
+
+        .faq-title:hover span:first-child {
+            background-position: -100% 0;
+        }
+
+        .faq-title:hover span:last-child {
+            background-position: 0 0;
+        }
+

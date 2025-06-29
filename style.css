@@ -1,0 +1,332 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+p{
+    font-family:'Ubuntu',sans-serif;
+}
+.nav-item a{
+    text-decoration:none;
+    color:black;
+    font-weight:600;
+    text-transform:uppercase;
+    margin-right:35px;
+    transition:all 0.4s;
+    font-family:'Montserrat',sans-serif;
+}
+.nav-item a:hover{
+    color:#4481eb;
+}
+.navbar-brand{
+    height:50px;
+    width:75px;
+}
+.search{
+    height:45px;
+    outline:none;
+    border:2px solid #4481eb;
+    background-color:transparent;
+    border-radius:20px 0px 0px 20px;
+    border-right:none;
+    /* box-shadow:none; */
+}
+/* .search:focus{
+    outline:none;
+    box-shadow:none;
+    border:#4481eb;
+} */
+.btn1{
+    height:45px;
+    outline:none;
+    border:none;
+    background-color:#4481eb;
+    color:white;
+    border-radius:0px 20px 20px 0px;
+    transition:all 0.4s;
+}
+.btn1:hover{
+    background-color:orange;
+}
+.bi-bag-check{
+    font-size:30px;
+    color:black;
+    cursor:pointer;
+    padding-top:5px;
+}
+.bi-bag-check:hover{
+    color:orange;
+}
+.navbar-toggler{
+    font-size:23px;
+    color:black;
+}
+.navbar-toggler:focus{
+    outline:none;
+    box-shadow:none;
+}
+.main{
+    background:url(./images/paperitemsillustration.jpg)no-repeat;
+    background-size:cover;
+    height:95vh;
+    width:100%;
+}
+.main h1{
+    font-size:5rem;
+    font-family:'Righteous',cursive;
+}
+.main p:nth-child(1){
+    font-size:18px;
+    font-weight:500;
+    padding-top:100px;
+}
+.main p:nth-child(2){
+   font-size:18px; 
+   color:orange;
+}
+.mbtn1{
+    height:50px;
+    width:20%;
+    outline:none;
+    border:none;
+    color:white;
+    background:#4481eb;
+    border-radius:50px;
+    transition:all 0.4s;
+}
+.mbtn1:hover{
+    background-color: orange;
+}
+.mbtn2{
+    height:50px;
+    width:20%;
+    outline:none;
+    background-color:transparent;
+    color:#4481eb;
+    border-radius:50px;
+    border:1px solid #4481eb;
+    transition:all 0.4s;
+}
+.mbtn2:hover{
+    background-color:orange;
+    border:none;
+    color:white;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+.ubuntu-regular {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  /* .line{
+    height:6px;
+    width:20%;
+    background:#4481eb;
+    display:inline-block;
+  }
+  .about{
+    background:url(./images/paperenvelopsad.jpg)no-repeat;
+    background-size:cover;
+    height:90vh;
+    width:100%;
+  }
+  .mbtn3{
+    height:50px;
+    width:20%;
+    outline:none;
+    border:none;
+    color:white;
+    background:#4481eb;
+    border-radius:50px;
+    transition:all 0.4s;
+}
+.mbtn3:hover{
+    background-color: orangered;
+} */
+.line {
+    height: 6px;
+    width: 20%;
+    background: #4481eb;
+    display: inline-block;
+  }
+  
+  .about {
+    background: url(./images/paperenvelopsad.jpg) no-repeat;
+    background-size: cover;
+    height: 70vh;
+    width: 100%;
+  }
+  .about p{
+    font-weight:bold;
+    color:black;
+  }
+  
+  .mbtn3 {
+    height: 50px;
+    width: 40%;
+    outline: none;
+    border: none;
+    color: white;
+    background: #4481eb;
+    border-radius: 50px;
+    transition: all 0.4s;
+  }
+  
+  .mbtn3:hover {
+    background-color: orange;
+  }
+  
+  /* Adjusted margin for centering */
+  .col-lg-5 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .about h1{
+    font-size:3rem;
+    font-family:'Righteous',cursive;
+    font-weight:bold;
+}
+.welcome{
+    background: orange;
+}
+.line2{
+    height:6px;
+    width:40%;
+    background-color:white;
+    display:inline-block;
+}
+.welcome h1{
+    font-size:3 rem;
+    font-weight:bold;
+}
+.welcome .card{
+    border:none;
+    border-radius:0;
+    cursor:pointer;
+}
+.welcome i{
+    font-size:45px;
+    color:orange;
+
+}
+.welcome h2{
+    font-weight:lighter;
+    padding:10px 0px;
+}
+.star{
+    text-align:end;
+    color:orange;
+}
+.product .card-body{
+    border:1px dashed rgb(175, 172, 172);
+}
+.product .card{
+   border:none; 
+   border-radius:0;
+   cursor:pointer;
+}
+.head1{
+    font-weight:400;
+    margin:0;
+}
+.per1{
+    color:rgb(175, 172, 172);
+}
+.btnc{
+    height:50px;
+    width:50%;
+    border:none;
+    color:white;
+    background-color:orange;
+    border-radius:50px;
+    margin:0 auto;
+    display:block;
+    transition: all 0.4s;
+}
+.btnc:hover{
+   outline:none; 
+   border:1px solid orange;
+   color:orange;
+   background-color:white;
+   border-radius:50px;
+}
+.contact{
+    background:url(./images/paperplanesad.jpg);
+    color:white;
+    background-size:cover;
+    width:100%;
+}
+.contact h1{
+    font-size:3rem;
+    font-weight:bold;
+    color:white;
+}
+.contact p{
+    color:white;
+}
+.circle{
+    height:60px;
+    width:60px;
+    border-radius:50%;
+    background-color:white;
+    color:black;
+    text-align:center;
+    padding-top:15px;
+    font-size:18px;
+}
+.contact input{
+    height:40px;
+    width:100%;
+    border:none;
+    outline:none;
+    background-color: white;
+    margin-top:10px;
+    padding:10px;
+}
+.contact textarea{
+    height:100px;
+    width:100%;
+    border:none;
+    outline:none;
+    background-color: white;
+    margin-top:10px;
+    padding:10px;
+}
+.cbtn{
+    height:50px;
+    width:65%;
+    outline:none;
+    border:none;
+    color:black;
+    background:white;
+    border-radius:50px;
+    font-weight:lighter;
+    transition:all 0.3s;
+}
+.cbtn:hover{
+    background:orange;
+
+}
+.footer{
+    background:orange;
+    color:white;
+    padding-top:3px;
+
+}
+.s1{
+    height:40px;
+}
+/* Add this CSS to your existing stylesheet or create a new one */
+
+
+
+ 
+
+  
+  

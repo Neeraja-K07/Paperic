@@ -1,0 +1,117 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family:"Poppinns",sans-serif;
+}
+section{
+    height:100vh;
+    width:100%;
+    display:grid;
+    place-items:center;
+}
+.row{
+    display:flex;
+    flex-wrap:wrap;
+}
+.card{
+   
+    width:100%;
+    height:100%;
+    padding:2em 1.5em;
+    background:linear-gradient(white 50%, #4481eb 50%);
+    background-size:100% 200%;
+    background-position:0 2.5%;
+    border-radius:5px;
+    box-shadow: 0 0 35px rgba(0,0,0,0.12);
+    cursor:pointer;
+    transition:0.5s;
+}
+.column{
+    width:100%;
+    /* border:1px solid orange; */
+    padding:0 1em 1em 1em;
+    text-align:center;
+}
+h3{
+    font-size:20px;
+    font-weight:600;
+    color:black;
+    margin:1em 0;
+}
+p{
+    color:#375a7b;
+    font-size:15px;
+    line-height:1.6;
+    letter-spacing:0.03em;
+}
+.icon-wrapper{
+    background-color:#4481eb;
+    position:relative;
+    margin:auto;
+    font-size:30px;
+    height:2.5em;
+    width:2.5em;
+    color:white;
+    border-radius:50%;
+    display:grid;
+    place-items: center;
+    transition:0.5s;
+}
+.card:hover{
+    background-position:0 100%;
+}
+.card.hover .icon-wrapper{
+    background-color:white;
+    color:#4481eb;
+}
+.card:hover h3{
+    color:white;
+}
+.card:hover p{
+    color:white;
+}
+@media screen and (min-width:768px){
+    section{
+        padding:0 2em;
+    }
+    .column{
+        flex:0 50%;
+        max-width:50%;
+    }
+}
+@media screen and (min-width:992px){
+    section{
+        padding:1em 3em;
+    }
+    .column{
+        flex: 0 0 33.33%;
+        max-width:33.33%;
+    }
+}
+/* Add this style for the new wrapper and button */
+.wrapper {
+    background: linear-gradient(90deg, #4481eb 50%, orange 50%);
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.home-button {
+    background-color: #4481eb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.home-button:hover {
+    background-color: orange;
+}

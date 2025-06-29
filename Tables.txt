@@ -1,0 +1,107 @@
+Tables
+--------
+mysql> show tables;
++-------------------+
+| Tables_in_paperic |
++-------------------+
+| cart              |
+| customer          |
+| orders            |
+| payment           |
+| product           |
+| product_review    |
+| reviews_ratings   |
++-------------------+
+7 rows in set (0.42 sec)
+
+mysql> desc customer;
++----------------+--------------+------+-----+---------+----------------+
+| Field          | Type         | Null | Key | Default | Extra          |
++----------------+--------------+------+-----+---------+----------------+
+| c_id           | int          | NO   | PRI | NULL    | auto_increment |
+| username       | varchar(15)  | NO   |     | NULL    |                |
+| password       | varchar(64)  | YES  |     | NULL    |                |
+| email          | varchar(30)  | NO   |     | NULL    |                |
+| phoneno        | bigint       | NO   |     | NULL    |                |
+| companyaddress | varchar(30)  | NO   |     | NULL    |                |
+| gstno          | varchar(15)  | NO   |     | NULL    |                |
+| role           | varchar(10)  | NO   |     | NULL    |                |
+| profile_image  | varchar(255) | YES  |     | NULL    |                |
++----------------+--------------+------+-----+---------+----------------+
+9 rows in set (0.12 sec)
+
+mysql> desc product;
++---------------+------------------+------+-----+---------+----------------+
+| Field         | Type             | Null | Key | Default | Extra          |
++---------------+------------------+------+-----+---------+----------------+
+| p_id          | int              | NO   | PRI | NULL    | auto_increment |
+| product_name  | varchar(30)      | NO   |     | NULL    |                |
+| product_qty   | int              | NO   |     | NULL    |                |
+| amount        | float            | NO   |     | NULL    |                |
+| image         | varchar(150)     | YES  |     | NULL    |                |
+| description   | varchar(100)     | YES  |     | NULL    |                |
+| min_qty       | int              | NO   |     | NULL    |                |
+| added_to_home | enum('Yes','No') | NO   |     | No      |                |
++---------------+------------------+------+-----+---------+----------------+
+8 rows in set (0.04 sec)
+
+mysql> desc cart;
++----------+------+------+-----+---------+----------------+
+| Field    | Type | Null | Key | Default | Extra          |
++----------+------+------+-----+---------+----------------+
+| cart_id  | int  | NO   | PRI | NULL    | auto_increment |
+| p_id     | int  | YES  | MUL | NULL    |                |
+| c_id     | int  | YES  | MUL | NULL    |                |
+| quantity | int  | YES  |     | 10      |                |
+| order_id | int  | YES  | MUL | -1      |                |
++----------+------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> desc orders;
++------------------+--------------+------+-----+---------+----------------+
+| Field            | Type         | Null | Key | Default | Extra          |
++------------------+--------------+------+-----+---------+----------------+
+| order_id         | int          | NO   | PRI | NULL    | auto_increment |
+| deliver_to       | varchar(40)  | NO   |     | NULL    |                |
+| delivery_address | varchar(100) | NO   |     | NULL    |                |
+| d_email          | varchar(40)  | NO   |     | NULL    |                |
+| status           | int          | NO   |     | 0       |                |
++------------------+--------------+------+-----+---------+----------------+
+5 rows in set (0.05 sec)
+
+mysql> desc payment;
++------------+-------------+------+-----+-------------------+-------------------+
+| Field      | Type        | Null | Key | Default           | Extra             |
++------------+-------------+------+-----+-------------------+-------------------+
+| payment_id | int         | NO   | PRI | NULL              | auto_increment    |
+| c_id       | int         | YES  | MUL | NULL              |                   |
+| amount     | float       | NO   |     | NULL              |                   |
+| date       | timestamp   | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
+| method     | varchar(40) | YES  |     | NULL              |                   |
+| order_id   | int         | YES  | MUL | NULL              |                   |
++------------+-------------+------+-----+-------------------+-------------------+
+6 rows in set (0.00 sec)
+
+mysql> desc Reviews_ratings;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| r_id     | int          | NO   | PRI | NULL    | auto_increment |
+| c_id     | int          | YES  | MUL | NULL    |                |
+| order_id | int          | YES  | MUL | NULL    |                |
+| Review   | varchar(200) | YES  |     | NULL    |                |
+| ratings  | int          | YES  |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+5 rows in set (0.16 sec)
+
+mysql> desc product_review;
++---------+--------------+------+-----+---------+----------------+
+| Field   | Type         | Null | Key | Default | Extra          |
++---------+--------------+------+-----+---------+----------------+
+| pr_id   | int          | NO   | PRI | NULL    | auto_increment |
+| p_id    | int          | YES  | MUL | NULL    |                |
+| c_id    | int          | YES  | MUL | NULL    |                |
+| reviews | varchar(100) | YES  |     | NULL    |                |
+| ratings | int          | YES  |     | NULL    |                |
++---------+--------------+------+-----+---------+----------------+
+5 rows in set (0.05 sec)
